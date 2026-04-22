@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GlowLogics | Cart</title>
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/typography.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body data-page="cart">
+    <div class="page-bg-layer"></div>
+    <header class="site-header">
+      <div class="container">
+        <a href="./index.html" class="logo">GlowLogics</a>
+        <nav class="nav-links">
+          <a href="./index.html">Home</a>
+          <a href="./products.html">Products</a>
+          <a href="./wishlist.html">Wishlist <span class="wishlist-badge" style="display:none">0</span></a>
+          <a class="active" href="./cart.html">Cart <span class="cart-badge" style="display:none">0</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content container">
+      <div class="section-head">
+        <h1>Shopping Cart</h1>
+        <a class="btn btn-secondary" href="./products.html">Continue Shopping</a>
+      </div>
+
+      <div class="grid-2" style="align-items:start">
+        <section id="cartTableWrap" class="card glass reveal">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Subtotal</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cartItemsBody"></tbody>
+          </table>
+
+          <div id="emptyCartState" style="display:none;text-align:center;padding:1.4rem 0">
+            <h3>Your cart is empty</h3>
+            <p class="text-secondary">Explore trending products and start adding your favorites.</p>
+            <a class="btn btn-primary" href="./products.html">Start Shopping</a>
+          </div>
+        </section>
+
+        <aside class="card glass reveal">
+          <h3>Cart Summary</h3>
+          <p>Subtotal: <strong id="cartSubtotal">$0.00</strong></p>
+          <p>Shipping: <strong id="cartShipping">$0.00</strong></p>
+          <p>Tax: <strong id="cartTax">$0.00</strong></p>
+          <hr style="border-color:rgba(255,255,255,.1)" />
+          <p style="font-size:1.2rem">Total: <strong id="cartTotal">$0.00</strong></p>
+
+          <label>
+            <span class="text-secondary">Coupon code</span>
+            <input class="form-control" id="couponCode" placeholder="GLOW10" />
+          </label>
+
+          <div style="display:grid;gap:.6rem;margin-top:.8rem">
+            <a class="btn btn-primary" href="./checkout.html">Proceed to Checkout</a>
+            <a class="btn btn-secondary" href="./products.html">Continue Shopping</a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
+

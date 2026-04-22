@@ -1,0 +1,4 @@
+target/
+glowlogics.db
+*.log
+node_modules/

@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: radial-gradient(circle at top right, rgba(0, 217, 255, 0.15), transparent 40%),
+    radial-gradient(circle at 20% 10%, rgba(107, 76, 217, 0.2), transparent 45%),
+    var(--color-bg-dark);
+  color: var(--color-text-primary);
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  color: var(--color-text-primary);
+}
+
+.page-bg-layer {
+  position: fixed;
+  inset: -20%;
+  background: radial-gradient(circle at 70% 20%, rgba(0, 217, 255, 0.12), transparent 40%),
+    radial-gradient(circle at 10% 40%, rgba(107, 76, 217, 0.18), transparent 45%);
+  filter: blur(60px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glass {
+  background: var(--color-elevated-bg);
+  border: var(--border-glass);
+  backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

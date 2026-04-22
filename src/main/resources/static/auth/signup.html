@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GlowLogics | Sign Up</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/typography.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body data-page="signup">
+    <div class="page-bg-layer"></div>
+
+    <header class="site-header">
+      <div class="container">
+        <a href="../index.html" class="logo">GlowLogics</a>
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../products.html">Products</a>
+          <a class="active" href="../auth/signup.html">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="auth-layout">
+      <section class="card glass reveal" style="width:min(100%,520px)">
+        <h1>Create Account</h1>
+        <p class="text-secondary">Join GlowLogics and unlock premium storefront features.</p>
+
+        <form id="signupForm" style="display:grid;gap:.8rem;margin-top:.8rem">
+          <label>Full Name<input class="form-control" name="fullName" required /></label>
+          <label>Email<input class="form-control" name="email" type="email" required /></label>
+          <label>
+            Password
+            <input id="signupPassword" class="form-control" name="password" type="password" required />
+          </label>
+          <div class="card" style="padding:.6rem">
+            <div style="height:8px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden">
+              <div id="passwordStrengthBar" style="height:100%;width:0;background:#e63946;transition:.3s"></div>
+            </div>
+            <p id="passwordStrengthText" class="text-secondary" style="margin:.35rem 0 0 0">Weak</p>
+            <small class="text-secondary">Use 8+ characters including uppercase, number, and symbol.</small>
+          </div>
+          <label>Confirm Password<input class="form-control" name="confirmPassword" type="password" required /></label>
+          <label>Phone<input class="form-control" name="phone" required /></label>
+          <label style="display:flex;align-items:center;gap:.5rem"><input type="checkbox" name="terms" /> I accept terms & conditions</label>
+          <label style="display:flex;align-items:center;gap:.5rem"><input type="checkbox" name="marketing" /> Send me launch updates and offers</label>
+          <button class="btn btn-primary" type="submit">Create Account</button>
+        </form>
+
+        <p style="margin-top:1rem" class="text-secondary">Already registered? <a href="../auth/login.html">Log in</a></p>
+      </section>
+    </main>
+
+    <script type="module" src="../js/app.js"></script>
+  </body>
+</html>
+

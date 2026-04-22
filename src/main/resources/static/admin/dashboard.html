@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GlowLogics Admin | Dashboard</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/typography.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+  <body data-admin-page="dashboard">
+    <header class="site-header">
+      <div class="container">
+        <a href="../index.html" class="logo">GlowLogics Admin</a>
+        <nav class="nav-links">
+          <a href="../index.html">Storefront</a>
+          <a href="../admin/manage-products.html">Catalog Ops</a>
+          <a href="../index.html" data-action="logout">Logout</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="admin-shell">
+      <aside class="admin-sidebar">
+        <nav>
+          <a class="active" href="../admin/dashboard.html">Dashboard</a>
+          <a href="../admin/manage-products.html">Manage Products</a>
+          <a href="../admin/manage-orders.html">Manage Orders</a>
+          <a href="../admin/manage-users.html">Manage Users</a>
+          <a href="../index.html" data-action="logout">Logout</a>
+        </nav>
+      </aside>
+
+      <section class="admin-main">
+        <h1>Admin Dashboard</h1>
+        <p class="text-secondary">Track sold items for today, week, month, plus active customers and catalog health.</p>
+        <section id="adminMetrics" class="stats-grid" style="margin:1rem 0"></section>
+
+        <section class="admin-charts-grid">
+          <article class="card glass">
+            <h3>Sales Revenue (Last 7 Days)</h3>
+            <div id="adminSalesBarChart"></div>
+          </article>
+          <article class="card glass">
+            <h3>Sales Mix by Category (Month)</h3>
+            <div id="adminCategoryPieChart"></div>
+          </article>
+        </section>
+
+        <section class="card glass">
+          <h3>Recent Orders</h3>
+          <div id="recentOrders"></div>
+        </section>
+
+        <section class="card glass" style="margin-top:1rem">
+          <h3>Top Selling Products (This Month)</h3>
+          <div id="adminTopProducts"></div>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="../js/app.js"></script>
+  </body>
+</html>
+
